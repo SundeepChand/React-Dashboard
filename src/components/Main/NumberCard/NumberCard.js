@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
     height: '100px',
     paddingTop: '15px',
     boxShadow: '0px 0px 4px 0px rgba(50, 50, 50, 0.5)',
-    borderLeft: `3px solid ${theme.palette.primary.main}`,
+    borderLeft: `5px solid ${theme.palette.primary.main}`,
     backgroundColor: 'white',
   },
   iconDiv: {
     width: '40%',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'flex-start'
   },
   iconBadge: {
     WebkitBoxSizing: 'border-box',
@@ -37,7 +37,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '7px',
   },
   textDiv: {
-    width: '60%'
+    width: '60%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexWrap: 'wrap',
   },
   fullWidth: {
     width: '100%'

@@ -42,7 +42,9 @@ const DataDisplayDiv = ({ data }) => {
 
         <div className={classes.fullWidth}>
           <Typography variant="h6" style={{ fontWeight: '400', fontSize: '15px' }}>RECENT ORDERS</Typography>
-          <Typography paragraph style={{ fontSize: '10px', color: 'gray' }}>You can edit the records in the table.</Typography>
+          <Typography paragraph style={{ fontSize: '10px', color: 'gray' }}>
+            You can edit & add more records in the table.
+          </Typography>
         </div>
 
       </div>

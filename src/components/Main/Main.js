@@ -103,7 +103,7 @@ const Main = () => {
       .get('https://wygtwu2p2j.execute-api.ap-south-1.amazonaws.com/test')
       .then(response => {
         const responseData = response.data
-        console.log(responseData)
+        // console.log(responseData)
         setData(responseData)
         const newTopFourData = [...topFourData]
         newTopFourData[0].value = responseData.dataForTopFourBoxes.totalRevenue

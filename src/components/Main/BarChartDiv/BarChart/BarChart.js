@@ -7,8 +7,6 @@ const options = {
   scales: {
        xAxes: [{
            stacked: true,
-           barPercentage: 1.0,
-           categoryPercentage: 0.8,
        }],
        yAxes: [{
            stacked: true
@@ -25,19 +23,25 @@ const data = {
       stack: arbitraryStackKey,
       label: 'Desktops',
       backgroundColor: 'rgba(126, 87, 194, 1)',
-      data: [50, 75, 100, 75, 100, 75, 50, 75, 50, 75, 100]
+      data: [50, 75, 100, 75, 100, 75, 50, 75, 50, 75, 100],
+      categoryPercentage: 0.8,
+      barPercentage: 1.0,
     },
     {
       stack: arbitraryStackKey,
       label: 'Tablets',
       backgroundColor: 'rgba(126, 87, 194, 0.7)',
-      data: [150, 50, 75, 50, 75, 50, 25, 50, 25, 50, 75]
+      data: [150, 50, 75, 50, 75, 50, 25, 50, 25, 50, 75],
+      categoryPercentage: 0.8,
+      barPercentage: 1.0,
     },
     {
       stack: arbitraryStackKey,
       label: 'Mobiles',
       backgroundColor: 'rgba(126, 87, 194, 0.3)',
-      data: [100, 75, 50, 75, 50, 75, 50, 25, 50, 50, 100]
+      data: [100, 75, 50, 75, 50, 75, 50, 25, 50, 50, 100],
+      categoryPercentage: 0.8,
+      barPercentage: 1.0,
     }
   ]
 }

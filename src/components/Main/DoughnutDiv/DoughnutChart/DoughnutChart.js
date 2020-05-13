@@ -10,11 +10,11 @@ const data = {
 		data: [80, 20],
 		backgroundColor: [
     '#54d5ff',
-		'#C9C9C9',
+		'#cccccc',
 		],
 		hoverBackgroundColor: [
-		'rgb(28, 184, 206)',
-		'#A1A1A1',
+		'#23c5fa',
+		'#969696',
     ]
   }],
 }
