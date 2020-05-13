@@ -25,7 +25,8 @@ const theme = createMuiTheme({
   status: {
     blue: {
       main: '#54d5ff',
-      light: '#a3e8ff'
+      light: '#a3e8ff',
+      dark: '#28687d'
     },
   }
 });
