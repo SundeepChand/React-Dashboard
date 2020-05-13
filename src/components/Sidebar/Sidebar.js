@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -84,8 +84,7 @@ const sideBarMenuItems = [{
 ]
 
 const Sidebar = ({ open }) => {
-  const classes = useStyles();
-  const theme = useTheme();
+  const classes = useStyles()
 
   return (
     <Drawer

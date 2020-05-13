@@ -9,10 +9,14 @@ import BarChartIcon from '@material-ui/icons/BarChart'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import DoughnutDiv from './DoughnutDiv/DoughnutDiv'
 import LineChartDiv from './LineChartDiv/LineChartDiv'
+import BarChartDiv from './BarChartDiv/BarChartDiv'
+import DataDisplayDiv from './DataDisplayDiv/DataDisplayDiv'
+import Footer from './Footer/Footer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    backgroundColor: '#EEEEEE',
   },
   toolbar: {
     display: 'flex',
@@ -25,25 +29,35 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+    paddingBottom: '0px',
   },
-  displayFlex: {
+  row: {
     display: 'flex',
     justifyContent: 'space-around',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    marginBottom: '20px',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '0px',
+    }
   },
   chartContainerSmall: {
-    width: '30%',
+    width: '39%',
   },
   chartContainerMedium: {
-    width: '50%',
+    width: '49%',
   },
   chartContainerLarge: {
-    width: '70%',
+    width: '59%',
   },
   chartContainer: {
+    marginTop: '0px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      marginBottom: '15px',
     },
+  },
+  fullWidth: {
+    width: '100%'
   }
 }))
 
@@ -117,23 +131,14 @@ const Main = () => {
             </Typography>
           </div>
 
-          <div className={classes.displayFlex}>
+          <div className={`${classes.row} ${classes.chartContainer}`}>
             {topFourData.map(item => (
               <NumberCard key={item.id} data={item} />
             ))}
           </div>
 
-          <div className={classes.displayFlex}>
-            <Typography paragraph>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in
-              the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </Typography>
+          <div className={classes.row}>
+
             <div className={`${classes.chartContainerSmall} ${classes.chartContainer}`}>
               <DoughnutDiv />
             </div>
@@ -142,6 +147,24 @@ const Main = () => {
               <LineChartDiv />
             </div>
           </div>
+
+          <div className={classes.row}>
+
+            <div className={`${classes.fullWidth} ${classes.chartContainer}`}>
+              <BarChartDiv />
+            </div>
+
+          </div>
+
+          <div className={classes.row}>
+            <div className={`${classes.fullWidth} ${classes.chartContainer}`}>
+              <DataDisplayDiv data={data !== null ? data.dataForBottomRightTable : []} />
+            </div>
+          </div>
+
+          <footer className={classes.row}>
+            <Footer />
+          </footer>
       </main>
     </div>
   )

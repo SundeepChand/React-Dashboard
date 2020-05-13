@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import LineChart from './LineChart/LineChart'
+import BarChart from './BarChart/BarChart'
 import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -8,8 +8,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    margin: '0px',
-    marginRight: '0px',
     height: '100%',
     WebkitBoxSizing: 'border-box',
     MozBoxSizing: 'border-box',
@@ -21,21 +19,26 @@ const useStyles = makeStyles((theme) => ({
   fullWidth: {
     width: '100%',
   },
+  fullWidthLimited: {
+    width: '100%',
+    maxWidth: '960px',
+    maxHeight: '560px'
+  },
 }))
 
-const LineChartDiv = () => {
+const BarChartDiv = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
       <div className={classes.fullWidth}>
-        <Typography variant="h6" style={{ fontWeight: '400', fontSize: '15px' }}>TOTAL SALES</Typography>
+        <Typography variant="h6" style={{ fontWeight: '400', fontSize: '15px' }}>SALES ANALYTICS</Typography>
       </div>
-      <div className={classes.fullWidth}>
-        <LineChart />
+      <div className={classes.fullWidthLimited}>
+        <BarChart />
       </div>
     </div>
   )
 }
 
-export default LineChartDiv
+export default BarChartDiv

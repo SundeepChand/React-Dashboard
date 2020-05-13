@@ -11,15 +11,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '47%',
     },
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
-    },
     marginBottom: '10px',
     borderRadius: '5px',
     height: '100px',
     paddingTop: '15px',
     boxShadow: '0px 0px 4px 0px rgba(50, 50, 50, 0.5)',
-    borderLeft: '3px solid purple'
+    borderLeft: `3px solid ${theme.palette.primary.main}`,
+    backgroundColor: 'white',
   },
   iconDiv: {
     width: '40%',
@@ -31,8 +29,9 @@ const useStyles = makeStyles((theme) => ({
     MozBoxSizing: 'border-box',
     width: '60px',
     height: '60px',
-    backgroundColor: 'rgba(120, 0, 180, 0.4)',
-    border: '3px solid rgb(120, 0, 180)',
+    backgroundColor: theme.palette.primary.light,
+    border: `3px solid ${theme.palette.primary.main}`,
+    color: theme.palette.primary.dark,
     textAlign: 'center',
     borderRadius: '50%',
     paddingTop: '7px',
